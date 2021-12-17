@@ -29,7 +29,7 @@ function setTime() {
   const ampm = hours >= 12 ? 'PM' : 'AM';
 
   timeElement.innerHTML = `
-    ${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes} ${ampm}
+    ${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes} <span class="ampm">${ampm}</span>
   `;
 
   dateElement.innerHTML = `
