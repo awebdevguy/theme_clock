@@ -58,7 +58,9 @@ body {
   width: 270px;
   height: 270px;
   background-color: transparent;
-  margin-bottom: 5rem;
+  /* justify-self: center; */
+  /* align-self: center; */
+  margin-bottom: 3rem;
 }
 
 .number {
