@@ -6,7 +6,7 @@
 
 :root {
   --primary-color: #000;
-  --secondary-color: #fff;
+  --secondary-color: lightblue;
 }
 
 html {
@@ -14,20 +14,20 @@ html {
 }
 
 html.dark {
-  --primary-color: #fff;
+  --primary-color: lightblue;
   --secondary-color: #333;
   background-color: #111;
   color: var(--primary-color);
 }
 
 body {
+  background-color: var(--secondary-color);
   font-family: 'Heebo', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
 }
 
 .toggle {
@@ -52,25 +52,35 @@ body {
 }
 
 .clock {
-  border: 2px solid var(--primary-color);
+  border: 4px solid var(--primary-color);
   border-radius: 50%;
   position: relative;
-  width: 270px;
-  height: 270px;
+  /* width: 270px; */
+  /* height: 270px; */
+  width: 70vh;
+  height: 70vh;
   background-color: transparent;
   /* justify-self: center; */
   /* align-self: center; */
-  margin-bottom: 3rem;
+  margin: auto;
 }
 
 .number {
   background-color: transparent;
   color: var(--primary-color);
-  height: 2rem;
-  width: 2rem;
+  /* height: 2rem; */
+  /* width: 2rem; */
+  height: 4rem;
+  width: 4rem;
+  font-size: 2rem;
+
+  /* align-items: center; */
   text-align: center;
-  justify-content: center;
-  padding: .25rem .25rem;
+  vertical-align: middle;
+  line-height: 4rem;
+  /* justify-content: center; */
+  /* padding: .25rem .25rem; */
+  /* padding: 1rem; */
 }
 
 .number#twelve {
@@ -106,22 +116,27 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 3px;
+  /* width: 3px; */
+  width: 5px;
   transform-origin: bottom center;
   /* transition: all 0.5s ease-in; */
 }
 
 .needle#hour {
-  height: 65px;
-  width: 5px;
+  /* height: 65px; */
+  height: 30%;
+  width: 10px;
+  /* width: 5px; */
 }
 
 .needle#minute {
-  height: 100px;
+  /* height: 100px; */
+  height: 45%;
 }
 
 .needle#second {
-  height: 100px;
+  /* height: 100px; */
+  height: 45%;
   background-color: #e74c3c;
 }
 
@@ -131,8 +146,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #e74c3c;
-  height: 10px;
-  width:10px;
+
+  /* height: 10px; */
+  /* width:10px; */
+  height: 20px;
+  width: 20px;
+
   border-radius: 50%;
   z-index: 100;
 }
@@ -152,6 +171,7 @@ body {
 
 .time {
   font-size: 60px;
+  margin-top: 2rem;
 }
 
 .ampm {

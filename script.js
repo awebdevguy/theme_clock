@@ -3,16 +3,23 @@ const minuteElement = document.getElementById('minute');
 const secondElement = document.getElementById('second');
 const timeElement = document.querySelector('.time');
 const dateElement = document.querySelector('.date');
-const toggle = document.querySelector('.toggle');
+// const toggle = document.querySelector('.toggle');
+// const html = document.querySelector('html');
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-toggle.addEventListener('click', (e) => {
+// toggle.addEventListener('click', (e) => {
+//   const html = document.querySelector('html');
+
+//   html.classList.contains('dark') ? (html.classList.remove('dark'), e.target.innerHTML = 'Dark Mode') : (html.classList.add('dark'), e.target.innerHTML = 'Light Mode');
+// });
+
+window.addEventListener('click', () => {
   const html = document.querySelector('html');
 
-  html.classList.contains('dark') ? (html.classList.remove('dark'), e.target.innerHTML = 'Dark Mode') : (html.classList.add('dark'), e.target.innerHTML = 'Light Mode');
+  html.classList.contains('dark') ? (html.classList.remove('dark')) : (html.classList.add('dark'));
 });
 
 setInterval(setTime, 1000);
